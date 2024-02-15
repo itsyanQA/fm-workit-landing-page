@@ -1,0 +1,26 @@
+@use "../../style/mixins";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+  margin-bottom: 35px;
+
+  &__apply-for-access {
+    color: var(--white);
+    font-family: Manrope, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.18px;
+    border-bottom: 2px solid var(--mint-bliss);
+    padding-bottom: 1px;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--mint-bliss);
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@use "../../style/mixins";
+
+.upper-content {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 45px;
+
+  &__title-and-button {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    @include mixins.heading-l;
+    max-width: 72%;
+    text-align: center;
+    color: var(--white);
+  }
+
+  &__tailored {
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      bottom: 5px;
+      background: var(--mint-bliss);
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__phone {
+    width: 715px;
+    height: 427px;
+  }
+}
